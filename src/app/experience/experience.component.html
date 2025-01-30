@@ -1,0 +1,24 @@
+<section class="experience" id="experience">
+  <div class="exp-button">
+    <button class="exp">
+      <i class="fa fa-briefcase"></i>
+      <span>Expérience</span>
+    </button>
+  </div>
+  <h2 class="experience-title" data-text="Expérience Professionnelle">Expérience Professionnelle</h2>
+  <div class="timeline">
+      <div class="timeline-item" *ngFor="let exp of experiences; let i = index" #step>
+          <div class="timeline-marker">
+              <div class="marker-circle"></div>
+              <div class="marker-line" *ngIf="i < experiences.length - 1"></div>
+          </div>
+          <div class="timeline-content">
+               <p class="date">{{ exp.date }}</p>
+               <h3>{{ exp.title }}</h3>
+               <p class="company">{{ exp.company }}</p>
+              <p class="technologies">Technologies: {{ exp.technologies }}</p>
+                <p>{{ exp.description }}</p>
+          </div>
+      </div>
+  </div>
+</section>

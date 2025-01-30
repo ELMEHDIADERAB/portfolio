@@ -1,0 +1,22 @@
+<section class="education">
+  <div class="edu-button">
+    <button class="edu">
+      <i class="fa fa-graduation-cap"></i>
+      <span>Éducation</span>
+    </button>
+  </div>
+  <h2 class="education-title" data-text="Education">Education</h2>
+  <div class="timeline">
+    <div class="timeline-item" *ngFor="let edu of educations; let i = index;" #timelineItem>
+      <div class="timeline-marker">
+         <div class="marker-circle"></div>
+         <div class="marker-line" *ngIf="i < educations.length - 1"></div>
+      </div>
+      <div class="timeline-content">
+        <p class="date">{{ edu.date }}</p>
+        <h3>{{ edu.title }}</h3>
+        <p>{{ edu.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>

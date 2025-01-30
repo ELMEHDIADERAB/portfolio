@@ -1,0 +1,168 @@
+.repositories-container {
+  display: flex;
+  flex-direction: column; /* Align items in a column */
+  align-items: center;
+  padding: 20px;
+  position: relative; /* Needed for absolute positioning of pseudo-elements */
+}
+.projets-button {
+  position: absolute;
+  top: 0px; /* Ajuste la position verticale */
+  left: 380px; /* Ajuste la position horizontale */
+}
+
+.projets {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  padding: 5px 12px; /* Réduit la taille du bouton */
+  border-radius: 15px;
+  font-size: 12px; /* Réduit la taille du texte */
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Espace entre l'icône et le texte */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.projets:hover {
+  background-color: white;
+  color: black;
+}
+
+.projets i {
+  font-size: 14px; /* Réduit la taille de l'icône */
+}
+
+.projects-title {
+  color: var(--accent-color);
+  font-size: 2.5em;
+  text-align: right;
+  margin-bottom: 30px;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  letter-spacing: 5px;
+}
+
+.projects-title::before {
+ content: '';
+ position: absolute;
+ left: 50%;
+ bottom: 0;
+ width: 100%;
+  height: 2px;
+ background-color: var(--accent-color);
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+ transition: transform 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.projects-title:hover::before {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.projects-title::after {
+content: attr(data-text);
+position: absolute;
+  top: 0;
+  left: 0;
+  color: transparent;
+  text-shadow: 0 0 10px var(--accent-color);
+ animation: glow 3s ease-in-out infinite alternate;
+}
+@keyframes glow {
+  0%{
+      text-shadow: 0 0 5px var(--accent-color);
+  }
+  100%{
+      text-shadow: 0 0 15px var(--accent-color);
+  }
+}
+
+.repositories-cards {
+   display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.repository-card {
+border-radius: 8px;
+  padding: 20px;
+margin: 10px;
+width: 320px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth effect */
+  display: flex;
+  flex-direction: column;
+}
+.repository-card:hover {
+transform: translateY(-5px); /* Slight lift on hover */
+   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.repo-name {
+color: var(--accent-color);
+margin-bottom: 10px;
+font-size: 1.2em;
+  font-weight: bold;
+}
+
+.repo-description {
+color: var(--text-color);
+  font-size: 0.9em;
+margin-bottom: 15px;
+  min-height: 50px;
+  flex: 1;
+}
+
+.repo-details {
+display: flex;
+justify-content: space-between;
+align-items: flex-end;
+}
+
+.repo-links {
+display: flex;
+margin-bottom: 10px;
+}
+
+.repo-link {
+  color: var(--text-color);
+  padding: 10px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+.repo-link:hover {
+  background-color: var(--accent-color);
+  color: #000;
+}
+  .repo-link i{
+      margin-right: 5px;
+      font-size: 1.4em;
+  }
+
+.language-tag {
+  background-color: #777;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+/* Add a simple fade-in animation */
+.repository-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.repository-card.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,0 +1,32 @@
+<section class="hero" id="accueil">
+  <div class="hero-content">
+    
+    <div class="home-button">
+      <button class="home">
+        <i class="fa fa-home"></i>
+        <span>ACCUEIL</span>
+      </button>
+    </div>
+    
+    <div class="text-content">
+      <h1 class="name">{{ name }}</h1>
+      <h2 class="title">{{ title }}</h2>
+
+      <div class="stats">
+        <div class="stat">
+          <span class="number">{{ projectsCount }}</span>
+          <span class="description">{{ projectsText }}</span>
+        </div>
+        <span class="divider"></span>
+        <div class="stat">
+          <span class="number">{{ experienceCount }}</span>
+          <span class="description">{{ experienceText }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="image-container">
+      <img [src]="imagePath" alt="ADERAB EL MEHDI" class="profile-image">
+    </div>
+  </div>
+</section>

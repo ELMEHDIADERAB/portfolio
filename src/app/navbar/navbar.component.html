@@ -1,0 +1,9 @@
+<nav class="navbar-vertical">
+  <ul class="nav-links-vertical">
+    <li *ngFor="let link of navLinks" class="nav-item">
+        <a href="#{{ link.id }}" class="nav-link">
+        <span class="material-icons">{{ link.icon }}</span>
+        </a>
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,38 @@
+.navbar-vertical {
+    position: fixed; /* Fixed positioning */
+    top: 50%; /* Center vertically */
+    right: 20px; /* Position on the right */
+    transform: translateY(-50%); /* Adjust vertical centering */
+    z-index: 100;
+}
+
+.nav-links-vertical {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    border-radius: 20px;
+    padding: 10px; /* Add padding to container */
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.nav-item {
+    margin-bottom: 5px; /* Space between icons */
+}
+
+.nav-link {
+    color: var(--text-color); /* Color to match the website */
+    text-decoration: none;
+    font-size: 1.4em; /* Increase icon size */
+    padding: 10px; /* Add padding to the clickable area */
+    display: flex;
+    transition: all 0.3s ease;
+}
+.nav-link:hover {
+  color: var(--accent-color);
+  background-color: rgba(255, 255, 255, 0.07); /* Highlight on hover */
+  border-radius: 10px; /* Slightly rounded edges */
+}

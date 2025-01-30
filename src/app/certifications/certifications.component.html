@@ -1,0 +1,8 @@
+<section class="certifications" id="certifications">
+    <h2>Certifications</h2>
+    <div *ngFor="let cert of certifications" class="certification-item">
+        <h3>{{ cert.name }}</h3>
+        <p class="provider">{{ cert.provider }}</p>
+        <p class="date">Date: {{ cert.date }}</p>
+    </div>
+</section>

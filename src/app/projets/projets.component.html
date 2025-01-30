@@ -1,0 +1,28 @@
+<div class="repositories-container" id="projets">
+    <div class="projets-button">
+        <button class="projets">
+          <i class="fa fa-cogs"></i>
+          <span>MES PROJETS</span>
+        </button>
+      </div>
+    <h2 class="projects-title" data-text="Projets">Projets</h2>
+    <div class="repositories-cards">
+        <div *ngFor="let repo of githubRepos" #repoCard class="repository-card">
+            <h3 class="repo-name">{{ repo.name }}</h3>
+            <p class="repo-description" *ngIf="repo.description">{{ repo.description }}</p>
+            <div class="repo-details">
+                <div class="repo-links">
+                    <a *ngIf="repo.homepage" [href]="sanitizeUrl(repo.homepage)" target="_blank" rel="noopener noreferrer" class="repo-link live-demo">
+                        <i class="material-icons">web</i>
+                        Live Demo
+                    </a>
+                    <a [href]="repo.html_url" target="_blank" rel="noopener noreferrer" class="repo-link github-repo">
+                        <i class="material-icons">code</i>
+                        Github Repo
+                    </a>
+                </div>
+            <span *ngIf="repo.language" class="language-tag">{{ repo.language }}</span>
+            </div>
+        </div>
+    </div>
+</div>

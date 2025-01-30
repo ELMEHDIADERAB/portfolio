@@ -1,0 +1,19 @@
+.certifications {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 2rem;
+}
+.certification-item {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+.certification-item:last-child {
+    border-bottom: none;
+}
+.certification-item .provider{
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+.certification-item .date {
+  color: var(--light-gray);
+}

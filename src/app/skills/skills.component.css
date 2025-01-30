@@ -1,0 +1,144 @@
+/* Style de la section */
+.skills {
+    text-align: center;
+    padding: 40px 0;
+    position: relative; /* Required for absolute positioning */
+    overflow: hidden; /* Prevents overflow on animation */
+   
+}
+
+.sk-button {
+    position: absolute;
+    top: 5px; /* Ajuste la position verticale */
+    left: 0px; /* Ajuste la position horizontale */
+  }
+  
+  .sk {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    padding: 5px 12px; /* Réduit la taille du bouton */
+    border-radius: 15px;
+    font-size: 12px; /* Réduit la taille du texte */
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espace entre l'icône et le texte */
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .sk:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .sk i {
+    font-size: 14px; /* Réduit la taille de l'icône */
+  }
+
+.section-title{
+    color: var(--accent-color);
+       font-size: 2.5em; /* Larger font size */
+       text-align: left; /* Center the title */
+       margin-bottom: 30px;
+       font-weight: bold;
+       position: relative; /* Needed for absolute positioning of pseudo-elements */
+       overflow: hidden;
+        white-space: nowrap;
+        letter-spacing: 5px;
+        
+ }
+ 
+ /* Animated underline with scaling effect */
+ .section-title::before {
+ content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+ width: 100%;
+  height: 2px; /* Underline thickness */
+  background-color: var(--accent-color); /* Underline color */
+   transform: translateX(-50%) scaleX(0); /* Initial state */
+   transform-origin: center; /* The animation will start from the center */
+  transition: transform 0.5s ease-in-out; /* Scale animation */
+  z-index: 1;
+ 
+ }
+ .section-title:hover::before {
+ transform: translateX(-50%) scaleX(1);
+ }
+ 
+ @keyframes glow {
+    0%{
+       text-shadow: 0 0 5px var(--accent-color);
+    }
+    100%{
+        text-shadow: 0 0 15px var(--accent-color);
+    }
+ }
+
+/* Grille des compétences */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 5 colonnes */
+    gap: 20px; /* Espacement entre les éléments */
+    justify-content: center;
+    padding: 40px;
+}
+
+/* Style des cartes */
+.skill-item {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 100px;
+    padding: 15px;
+    text-align: center;
+    transition: 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    height: 200px;
+    position: relative;
+}
+
+/* Contenu de la compétence */
+.skill-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1; /* Remplit l'espace vertical */
+    justify-content: center;
+}
+
+/* Icônes */
+.skill-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+/* Texte */
+.skill-name {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 15px; /* Fixe le texte en bas */
+    width: 100%;
+    text-align: center;
+}
+
+/* Pourcentage */
+.skill-percentage {
+    color: #00ff66;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+/* Effet hover */
+.skill-item:hover {
+    border-color: #00ff66;
+    transform: scale(1.1);
+}

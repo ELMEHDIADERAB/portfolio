@@ -1,0 +1,17 @@
+<section class="languages-qualities" id="languages-qualities">
+    <h2>Langues et Qualités</h2>
+    <div class="categories-container">
+      <div class="language">
+          <h3>Langues</h3>
+          <ul>
+            <li *ngFor="let language of languages.list">{{ language }}</li>
+          </ul>
+        </div>
+          <div class="qualities">
+              <h3>Qualités</h3>
+              <ul>
+                  <li *ngFor="let quality of qualities.list">{{ quality }}</li>
+              </ul>
+          </div>
+    </div>
+  </section>

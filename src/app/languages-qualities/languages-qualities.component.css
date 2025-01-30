@@ -1,0 +1,25 @@
+.languages-qualities {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 2rem;
+  }
+  .categories-container {
+      display: flex;
+      justify-content: space-between;
+  }
+  .language, .qualities {
+      width: 45%;
+  }
+  .language h3, .qualities h3 {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.5rem;
+  }
+  
+  @media (max-width: 768px) {
+      .categories-container {
+          flex-direction: column;
+      }
+      .language, .qualities {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+  }

@@ -1,0 +1,21 @@
+<section class="skills" id="competences">
+  <div class="sk-button">
+    <button class="sk">
+      <i class="fa fa-cogs"></i>
+      <span>MES COMPÉTENCES</span>
+    </button>
+  </div>
+  <h2 class="section-title">Mes <span>Compétences</span></h2>
+  <div class="skills-container">
+    <div 
+      class="skill-item" 
+      *ngFor="let skill of skills"
+    >
+      <div class="skill-content">
+        <img [src]="skill.image" [alt]="skill.name" class="skill-icon" />
+        
+      </div>
+      <p class="skill-name">{{ skill.name }}</p>
+    </div>
+  </div>
+</section>
